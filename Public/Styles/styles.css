@@ -1,0 +1,221 @@
+:root {
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Ticking Time", sans-serif;
+    --tertiary-font: "Poppins", sans-serif;
+}
+
+@font-face {
+    font-family: "Ticking Time";
+    src: url("../Fonts/ticking-timebomb-bb.regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(11, 11, 11);
+}
+
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-container {
+    width: 80%;
+    max-width: 90%;
+    min-width: 50px;
+    height: 80%;
+    max-height: 80%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%; 
+    left: 10%;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: row;
+    cursor: context-menu;
+    color: #fff;
+    z-index: 999;
+}
+
+.container {
+    width: 280px;
+    text-align: center;
+}
+
+.times {
+    font-family: var(--secondary-font);
+    font-size: 150px;
+    font-weight: 200;
+    margin-right: 2px;
+    transition: all 0.5s ease-in-out;
+}
+.splitscreen-times {
+    position: relative;
+    top: -50px;
+    transition: all 0.5s ease-in-out;
+}
+.splitscreen-times .container {
+    width: 80px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.texts {
+    font-family: var(--tertiary-font);
+    font-size: 60px;
+    margin-right: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.splitscreen-texts {
+    position: relative;
+    top: -50px;
+    transition: all 0.5s ease-in-out;
+}
+.splitscreen-times .button-container {
+    position: relative;
+    top: -50px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: 0.35s ease-in;
+}
+
+.buttons {
+    background-color: transparent;
+    font-family: var(--primary-font);
+    color: #fff;
+    padding: 10px 30px;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    margin-right: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.start-btn {
+    background-color: rgb(38, 72, 35);
+    transition: 0.25s ease-in-out all;
+}
+
+.start-btn:hover {
+    background: rgb(38, 72, 35);
+    border-color: rgb(38, 72, 35);
+    box-shadow: 0px 0px 40px rgb(38, 72, 35);
+}
+
+.start-btn:active {
+    opacity: 0.6;
+}
+
+.start-anime {
+    animation: slide-left 0.6s;
+}
+
+.stop-btn {
+    background-color: rgb(72, 4, 4);
+    transition: 0.20s ease-in all;
+}
+
+.stop-btn:hover {
+    background: rgb(72, 4, 4);
+    border-color: rgb(72, 4, 4);
+    box-shadow: 0px 0px 50px rgb(85, 0, 0);
+}
+
+.split-btn {
+    background-color: rgb(46, 46, 46);
+    animation: slide-left 0.6s;
+    transition: 0.25s ease-in-out;
+}
+
+.split-btn:hover {
+    background: rgb(35, 35, 35);
+    box-shadow: inset 0px 0px 5px black;
+}
+
+.split-btn:active {
+    opacity: 0.7;
+}
+
+.reset-btn {
+    background-color: rgb(35, 35, 35);
+    animation: slide-left 0.6s;
+    transition: 0.25s ease-in-out;
+}
+
+.reset-btn:hover {
+    background-color: rgb(49, 4, 4);
+    box-shadow: inset 0px 0px 15px black;
+}
+
+.reset-btn:active {
+    opacity: 0.7;
+}
+
+.split-screen {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    position: fixed;
+    bottom: 50px;
+    max-height: 400px;
+    overflow: hidden;
+
+    border-top: 2px solid whitesmoke;
+    border-radius: 5px;
+}
+.split-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 5px;
+    border-bottom: 0.5px solid whitesmoke;
+
+    gap: 100px;
+    overflow-y: auto;
+    max-height: 300px;
+    scrollbar-width: thin;
+
+    animation: slide-up 0.35s linear;
+}
+.split-times {
+    font-family: var(--tertiary-font);
+    font-size: 20px;
+    color: whitesmoke;
+}

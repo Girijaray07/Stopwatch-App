@@ -1,0 +1,16 @@
+{
+  "name": "stopwatch",
+  "version": "1.0.0",
+  "description": "A Stopwatch Website using NodeJS and EJS.",
+  "main": "App.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Girija Ray",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
