@@ -70,7 +70,7 @@ stopwatch/
 
 ## 📌 Author
 
-👤 **Girija Ray**\
+👤 **Girija Shankar Ray**\
 📧 Contact: [GitHub Profile](https://github.com/Girijaray07)\
 📩 Email: [Email](mailto:girijaray64@gmail.com)
 
